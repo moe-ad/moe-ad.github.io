@@ -1,0 +1,394 @@
+/* ==========================================================================
+   Cleanfolio — A clean, minimal, responsive Hugo theme
+   ========================================================================== */
+
+/* --- CSS Custom Properties --- */
+:root {
+  --white: #ffffff;
+  --lightgray: #ededed;
+  --gray: #dddddd;
+  --darkgray: #bbbbbb;
+  --black: #000000;
+  --blue: #0070C0;
+  --link-blue: #2980b9;
+  --shadow: 2px 2px var(--darkgray);
+  --border: thin solid var(--black);
+  --h1-font-size: 2.00rem;
+  --h2-font-size: 1.50rem;
+  --h3-font-size: 1.30rem;
+  --h4-font-size: 1.17rem;
+  --h5-font-size: 1.10rem;
+  --h6-font-size: 1.00rem;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 95%;
+}
+
+/* --- Responsive base --- */
+@media only screen and (min-width: 500px) {
+  :root { font-size: 17px; }
+  body { margin: 1rem auto; }
+}
+@media only screen and (max-width: 500px) {
+  :root { font-size: 11px; }
+  body { margin: 0 auto; }
+}
+
+/* --- Base resets --- */
+html {
+  background-color: var(--gray);
+}
+
+body {
+  min-height: calc(100vh - 2rem);
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  color: var(--black);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* --- Header --- */
+body > header {
+  color: var(--white);
+  background-color: var(--blue);
+  padding: 1.5rem 0 1rem 1rem;
+}
+
+body > header .title {
+  font-size: 2rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+body > header .description {
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
+}
+
+body > header .social {
+  font-size: 1.3rem;
+  margin: 0.5rem 0 0 0;
+}
+
+body > header .social a {
+  color: var(--white);
+  margin-right: 0.8rem;
+  text-decoration: none;
+}
+
+body > header .social a:hover {
+  opacity: 0.8;
+}
+
+/* --- Navigation --- */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+nav > button {
+  flex: 1 1 calc(20% - 1rem);
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: var(--white);
+  border: var(--border);
+  box-shadow: var(--shadow);
+  transition: background-color 0.3s ease;
+  color: var(--black);
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+nav > button:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+nav > button.active {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+h1 { font-size: var(--h1-font-size); }
+h2 { font-size: var(--h2-font-size); }
+h3 { font-size: var(--h3-font-size); }
+h4 { font-size: var(--h4-font-size); }
+h5 { font-size: var(--h5-font-size); }
+h6 { font-size: var(--h6-font-size); }
+
+/* --- Main content area --- */
+main {
+  flex: 1;
+}
+
+main > * {
+  padding: 0 2.5rem;
+}
+
+/* --- Links --- */
+a {
+  text-decoration: none;
+  color: var(--link-blue);
+}
+
+a:hover {
+  color: var(--black);
+}
+
+a:visited {
+  color: var(--link-blue);
+}
+
+/* --- Images --- */
+img {
+  display: block;
+  margin: 2em auto;
+  max-width: 60%;
+  max-height: 400px;
+}
+
+figcaption {
+  font-size: 0.95em;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 3em;
+}
+
+/* --- Lists --- */
+ul {
+  list-style-type: "- ";
+  margin-left: 2rem;
+}
+
+/* --- Code --- */
+code {
+  color: var(--black);
+  padding: 0 0.2rem;
+  border: thin solid var(--darkgray);
+  background-color: var(--lightgray);
+}
+
+pre {
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  overflow-x: auto;
+  border: var(--border);
+}
+
+pre > * {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* --- Blockquote --- */
+blockquote {
+  border: var(--border);
+  background: var(--lightgray);
+  border-left: 5px solid var(--blue);
+  padding: 0.05rem 1rem;
+}
+
+/* --- Tables --- */
+table {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--black);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  border: 1px solid var(--black);
+  padding: 0.3rem 0.6rem;
+}
+
+/* --- Entry lines (education, work) --- */
+.entry-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.entry-line .right {
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* --- Download CV link --- */
+.download-cv {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border: 2px solid var(--blue);
+  border-radius: 4px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.download-cv:hover {
+  background: var(--blue);
+  color: #fff;
+}
+
+/* --- Project cards --- */
+.collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 0 2.5rem !important;
+}
+
+@media only screen and (max-width: 500px) {
+  .collection {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  background: var(--white);
+  color: var(--black);
+  text-decoration: none;
+}
+
+.card-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.90rem;
+}
+
+.card-desc {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: auto;
+}
+
+.card-tag {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: var(--border);
+  padding: 0.1rem 0.3rem;
+}
+
+.card-note {
+  font-size: 0.70rem;
+  font-style: italic;
+  color: var(--darkgray);
+}
+
+/* --- Footer --- */
+footer {
+  color: var(--white);
+  background-color: var(--blue);
+  margin-top: auto;
+  padding: 0.5rem 0;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* --- Homepage hero --- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0 1rem 0;
+}
+
+.hero-text {
+  text-align: center;
+  max-width: 600px;
+}
+
+.hero-greeting {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.credit {
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 1.5rem;
+}
+
+/* FE mesh canvas */
+#fem-mesh {
+  display: block;
+  margin: 1rem auto 2rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Blog coming soon --- */
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0 2rem 0;
+}
+
+.typewriter p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--blue);
+  width: 0;
+  animation: typing 3s steps(28, end) 0.5s forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50%      { border-color: var(--blue); }
+}
+
+.coming-soon-sub {
+  margin-top: 2rem;
+  text-align: center;
+  max-width: 500px;
+  color: var(--darkgray);
+  font-size: 0.9rem;
+}

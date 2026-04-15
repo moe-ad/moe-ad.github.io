@@ -1,0 +1,38 @@
+baseURL = 'https://moe-ad.github.io/'
+languageCode = 'en-us'
+title = 'Muhammed Adeyemi Adedigba'
+theme = 'cleanfolio'
+
+[params]
+  description = 'Engineering Professional & Software Developer'
+  author = 'Muhammed Adeyemi Adedigba'
+  github = 'https://github.com/moe-ad'
+  linkedin = 'https://www.linkedin.com/in/muhammedadedigba'
+  email = 'adedigbamuhammed@gmail.com'
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 20
+  [[menus.main]]
+    name = 'Resume'
+    pageRef = '/resume'
+    weight = 30
+  [[menus.main]]
+    name = 'Projects'
+    pageRef = '/projects'
+    weight = 40
+  [[menus.main]]
+    name = 'Blog'
+    pageRef = '/blog'
+    weight = 50
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[taxonomies]

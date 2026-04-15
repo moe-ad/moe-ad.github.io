@@ -1,0 +1,7 @@
+<h1 class="title">{{ site.Title }}</h1>
+<p class="description">{{ site.Params.description }}</p>
+<p class="social">
+  {{ with site.Params.github }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>{{ end }}
+  {{ with site.Params.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>{{ end }}
+  {{ with site.Params.email }}<a href="mailto:{{ . }}"><i class="fas fa-envelope"></i></a>{{ end }}
+</p>

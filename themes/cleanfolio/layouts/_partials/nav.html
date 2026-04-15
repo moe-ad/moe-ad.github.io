@@ -1,0 +1,3 @@
+{{- range site.Menus.main }}
+  <button onclick="location.href='{{ .URL }}'">{{ .Name }}</button>
+{{- end }}
