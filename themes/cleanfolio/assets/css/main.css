@@ -327,12 +327,13 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 1.5rem 1rem 1.5rem;
 }
 
 .hero-text {
   text-align: center;
   max-width: 600px;
+  padding: 0 1rem;
 }
 
 .hero-greeting {
