@@ -3,7 +3,7 @@ title: "Resume"
 ---
 
 <p style="text-align: center; margin-bottom: 1rem;">
-  <a href="/Muhammed-Adedigba-CV.pdf" download class="download-cv"><i class="fa-solid fa-file-arrow-down"></i> Download CV (PDF)</a>
+  <a href="/Muhammed-Adedigba-Curriculum-Vitae.pdf" download class="download-cv"><i class="fa-solid fa-file-arrow-down"></i> Download CV (PDF)</a>
 </p>
 
 ---
